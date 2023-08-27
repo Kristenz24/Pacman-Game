@@ -1,0 +1,281 @@
+FloatLayout:
+    Background:
+        id: background
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "sky.png"
+
+            Rectangle:
+                size: self.width, 138
+                pos: self.pos[0], self.pos[1] + self.height - 138
+                texture: self.cloud_texture
+
+            Rectangle:
+                size: 2500, 750
+                pos: self.pos[0], self.pos[1]
+                texture: self.vines2_texture
+
+            Rectangle:
+                size: 2500, 750
+                pos: self.pos[0], self.pos[1]
+                texture: self.vines_texture
+
+            Rectangle:
+                size: self.width, self.height/5
+                pos: self.pos[0], self.pos[1] - 55
+                texture: self.floor_texture
+
+            Rectangle:
+                size: 450, 200
+                pos: self.center_x - 225, self.center_y + 50
+                source: "PacmanGameLogo.png"
+
+            Rectangle:
+                size: 85, 125
+                pos: self.pos[0] + 70, self.pos[1] + 80
+                source: "PlayerPacmanRight.png"
+
+            Color:
+                rgba: 1, 1, 1, 0.3
+            Rectangle:
+                size: 900, 700
+                pos: self.center_x - 400, self.center_y - 250
+                source: "gray_overlay.png"
+
+<QuestionOne>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "gameboard.png"
+
+    BoxLayout:
+        size_hint: 1, 0.9
+        pos_hint: {"top": 1.15}
+
+        Label:
+            text: "1. The print function can\nonly print literal value."
+            halign: "center"
+            color: 1, 1, 1, 1
+            font_size:self.width/20
+            font_name: 'Minecraft.ttf'
+    Button:
+        text: 'True'
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 50, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (1, 0, 0, 0.5)
+
+    Button:
+        text: "False"
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 390, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (0, 1, 0, 0.5)
+
+<QuestionTwo>:
+    canvas.before:
+
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "gameboard.png"
+
+    BoxLayout:
+        size_hint: 1, 0.9
+        pos_hint: {"top": 1.15}
+
+        Label:
+            text: "2. Python is a case\nsensitive language."
+            halign: "center"
+            color: 1, 1, 1, 1
+            font_size:self.width/20
+            font_name: 'Minecraft.ttf'
+
+    Button:
+        text: 'True'
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 50, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (0, 1, 0, 0.5)
+
+    Button:
+        text: "False"
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 390, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (1, 0, 0, 0.5)
+
+<QuestionThree>:
+    canvas.before:
+
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "gameboard.png"
+
+    BoxLayout:
+        size_hint: 1, 0.9
+        pos_hint: {"top": 1.15}
+
+        Label:
+            text: "3. Unlike lists, Tuples are \nimmutable, meaning Tuples \ncannot be changed after \nthey are created."
+            color: 1, 1, 1, 1
+            halign: "center"
+            font_size:self.width/20
+            font_name: 'Minecraft.ttf'
+
+    Button:
+        text: 'True'
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 50, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (0, 1, 0, 0.5)
+
+    Button:
+        text: "False"
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 390, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (1, 0, 0, 0.5)
+
+<QuestionFour>:
+    canvas.before:
+
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "gameboard.png"
+
+    BoxLayout:
+        size_hint: 1, 0.9
+        pos_hint: {"top": 1.15}
+
+        Label:
+            text: "4. Once a function returns a \nvariable, that variable is available \noutside of the function."
+            halign: "center"
+            color: 1, 1, 1, 1
+            font_size:self.width/20
+            font_name: 'Minecraft.ttf'
+
+    Button:
+        text: 'True'
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 50, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (1, 0, 0, 0.5)
+
+    Button:
+        text: "False"
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 390, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (0, 1, 0, 0.5)
+
+<QuestionFive>:
+    canvas.before:
+
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "gameboard.png"
+
+    BoxLayout:
+        size_hint: 1, 0.9
+        pos_hint: {"top": 1.15}
+
+        Label:
+            text: "5. The print function is\nnecessary to call a function."
+            halign: "center"
+            color: 1, 1, 1, 1
+            font_size:self.width/20
+            font_name: 'Minecraft.ttf'
+
+    Button:
+        text: 'True'
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 50, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (1, 0, 0, 0.5)
+
+    Button:
+        text: "False"
+        text_size: self.width, None
+        font_size: self.width / 13
+        color: (1,1,1,1)
+        size_hint: (0.45, 0.25)
+        pos: 390, 25
+        halign: "center"
+        valign: "center"
+        background_normal: 'button_normal.png'
+        background_down: 'button_down.png'
+        font_name: 'Minecraft.ttf'
+        on_release:self.background_color = (0, 1, 0, 0.5)
+
+
+
